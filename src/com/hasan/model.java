@@ -6,7 +6,7 @@ import java.util.HashMap;
 
  public class model
 {
-   HashMap<Integer, HashMap<String, Edge>> Node = new HashMap<Integer, HashMap<String, Edge>>();
+   static HashMap<Integer, HashMap<String, Edge>> Node = new HashMap<Integer, HashMap<String, Edge>>();
 
  model() {
 
@@ -124,7 +124,7 @@ import java.util.HashMap;
 
  }
 
- public HashMap<Integer, HashMap<String, Edge>> getnode(){
+ public static HashMap<Integer, HashMap<String, Edge>> getnode(){
   return Node;
  }
 }

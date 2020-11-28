@@ -45,69 +45,65 @@ public class Main {
         int testItr = 0;
         String nodename;
         String pahtname;
-        nodename =  TestArray[testItr];  // First Read
+        nodename = TestArray[testItr];  // First Read
         ++testItr;
 
-        if (Node.get(key).get(null).Target.VertexName == nodename){ //
+        if (Node.get(key).get(null).Target.VertexName == nodename) { //
             key = Node.get(key).get(null).Target.key; //
 
-            while (TestArray[testItr]!="-1"){
+            while (TestArray[testItr] != "-1") {
                 pahtname = TestArray[testItr]; // Second read
                 ++testItr;
                 boolean c = Node.get(key).containsKey(pahtname);
 
-                if (!c){
-                    System.out.println( pahtname + "  that has connected to "+ nodename + " is not found");
+                if (!c) {
+                    System.out.println(pahtname + "  that has connected to " + nodename + " is not found");
                     nodename = TestArray[testItr]; // Third Read kon_lon_aoff
                     ++testItr;
                     boolean Control = false;
-                    for (String k: Node.get(key).keySet()){
+                    for (String k : Node.get(key).keySet()) {
                         Edge hm = Node.get(key).get(k);
-                        if(hm.Target.VertexName ==nodename) {
+                        if (hm.Target.VertexName == nodename) {
                             key = hm.Target.key;
                             Control = true;
                         }
 
                     }
                     if (!Control) {
-                        System.out.println("There is a double fault. " + pahtname +" and "
+                        System.out.println("There is a double fault. " + pahtname + " and "
                                 + nodename + " is not found. Please solve these  problem berfore you start the test!!! ");
                         return;
                     }
 
 
-
-                }
-                else{
+                } else {
                     nodename = TestArray[testItr]; // Third Read kon_lon_aoff
                     ++testItr;
 
-                    if (Node.get(key).get(pahtname).Target.VertexName == nodename){
+                    if (Node.get(key).get(pahtname).Target.VertexName == nodename) {
 
                         key = Node.get(key).get(pahtname).Target.key;
-                    }
-                    else{
+                    } else {
                         System.out.println(Node.get(key).get(pahtname).Target.VertexName);
-                        System.out.println(  nodename + " that "+ pahtname +" is connect to the " + " is not found");
+                        System.out.println(nodename + " that " + pahtname + " is connect to the " + " is not found");
                     }
 
 
                 }
-
 
 
             }
 
 
-        }else {
+        } else {
             System.out.println("It is false start");
         }
 
 
-
+    }
 
     }
 
 
-    }
-}
+
+
