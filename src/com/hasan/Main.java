@@ -1,6 +1,6 @@
 package com.hasan;
 
-import com.hasan.model;
+
 import java.util.HashMap;
 
 
@@ -39,7 +39,9 @@ public class Main {
         TestArray[24] = "koff_loff_aoff";
         TestArray[25] = "-1";
         //*************************************************************
-        HashMap<Integer, HashMap<String, Edge>> Node = model.getnode();
+model.setn();
+        HashMap<Integer, HashMap<String, Edge>> Node = new HashMap<Integer, HashMap<String, Edge>>();
+               Node = model.getnode();
 
         int key = 0;
         int testItr = 0;
@@ -47,6 +49,7 @@ public class Main {
         String pahtname;
         nodename = TestArray[testItr];  // First Read
         ++testItr;
+
 
         if (Node.get(key).get(null).Target.VertexName == nodename) { //
             key = Node.get(key).get(null).Target.key; //
