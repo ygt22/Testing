@@ -1,14 +1,60 @@
 package com.hasan;
 
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
-
-
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
 
-    public static void main(String[] args) {
+
+
+
+    public static void main(String[] args) throws Exception {
+
+
+
+        String patternNode = "(?<=\":\")(.*?)(?=\"})";
+        Pattern p= Pattern.compile(patternNode);
+        int x ;
+        int y ;
+
+        File file = new File("C:\\Users\\Hasan\\Desktop\\a.txt");
+
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String data = null;
+        String d =null;
+        String st;
+        while ((st = br.readLine()) != null) {
+            String value = st;
+            byte ptext[] = value.getBytes();
+            data = new String(ptext, "UTF-8");
+            d = d + data;
+            System.out.println(st);
+        }
+        d= d.substring(10);
+        System.out.println(d);
+
+
+
+        Matcher m = p.matcher(d);
+        boolean crrr = m.find();
+        while(m.find()) {
+            m.find();
+            x = m.start();
+            y = m.end();
+            String testsqu = d.substring(x, y);
+            System.out.println(testsqu);
+            d = d.substring(y);
+            m = p.matcher(d);
+        }
+
+
 
         String[] TestArray = new String[30]; // combining both statements in one
 
@@ -39,9 +85,9 @@ public class Main {
         TestArray[24] = "koff_loff_aoff";
         TestArray[25] = "-1";
         //*************************************************************
-model.setMethod();
+        model.setMethod();
         HashMap<Integer, HashMap<String, Edge>> Node = new HashMap<Integer, HashMap<String, Edge>>();
-               Node = model.getnode();
+        Node = model.getnode();
 
         int key = 0;
         int testItr = 0;
@@ -105,7 +151,7 @@ model.setMethod();
 
     }
 
-    }
+}
 
 
 
