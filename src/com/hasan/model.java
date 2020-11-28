@@ -82,7 +82,7 @@ public class model {
   E9.Target = N2;
 
   Edge E10 = new Edge();
-  E10.EdgeName = "kon";
+  E10.EdgeName = "konn";
   E10.Target = N2;
 
   n0.put(E0.EdgeName,E0);
