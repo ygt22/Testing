@@ -39,7 +39,7 @@ public class Main {
         TestArray[24] = "koff_loff_aoff";
         TestArray[25] = "-1";
         //*************************************************************
-model.setn();
+model.setMethod();
         HashMap<Integer, HashMap<String, Edge>> Node = new HashMap<Integer, HashMap<String, Edge>>();
                Node = model.getnode();
 
