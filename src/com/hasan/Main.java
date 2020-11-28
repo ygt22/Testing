@@ -69,26 +69,27 @@ public class Main {
         boolean  TestFaultConroller = false;
 
          nodename = q.peek();
-         String xc = Node.get(key).get(null).Target.VertexName;
+         q.remove();
+         pahtname = q.peek();
+
+
         if (Node.get(key).get(null).Target.VertexName.equals(nodename)) { //
-            q.remove();
             key = Node.get(key).get(null).Target.key; //
-            pahtname = q.peek();
             while (!q.isEmpty()) {
                 if(Node.get(key).containsKey(pahtname)){
-                    // if kon ect is exist if is true
-                    key = Node.get(key).get(pahtname).Target.key;
                     q.remove();
                     nodename = q.peek();
-                    if(Node.get(key).get(pahtname).Target.VertexName.equals(nodename) ){
-                        key = Node.get(key).get(pahtname).Target.key;
+
+                    if(Node.get(key).get(pahtname).Target.VertexName.equals(nodename)){
+                        key =  Node.get(key).get(pahtname).Target.key;
                         q.remove();
                         pahtname = q.peek();
                     }else {
                         TestFaultConroller = true;
                         break;
                     }
-                }else{
+                    }
+                    else{
                     TestFaultConroller = true;
                     break;
                 }
