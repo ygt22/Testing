@@ -6,35 +6,34 @@ import java.util.HashMap;
 
  public class model
 {
- static Vertex N0 = new Vertex();
-static Vertex N1 = new Vertex();
- static Vertex N2 = new Vertex();
- static Vertex N3 = new Vertex();
- static Vertex N4 = new Vertex();
- static Vertex N5 = new Vertex();
-
-
- static Edge E0 = new Edge();
- static Edge E1 = new Edge();
- static  Edge E2 = new Edge();
- static Edge E3 = new Edge();
- static Edge E4 = new Edge();
- static Edge E5 = new Edge();
- static  Edge E6 = new Edge();
- static Edge E7 = new Edge();
- static Edge E8 = new Edge();
- static Edge E9 = new Edge();
- static Edge E10 = new Edge();
-
  static HashMap<Integer, HashMap<String,Edge>> Node = new HashMap<Integer,HashMap<String,Edge>>();
- static HashMap<String,Edge> n0 = new HashMap<>();
- static  HashMap<String,Edge> n1 = new HashMap<>();
- static  HashMap<String,Edge> n2 = new HashMap<>();
- static HashMap<String,Edge> n3 = new HashMap<>();
- static  HashMap<String,Edge> n4 = new HashMap<>();
- static  HashMap<String,Edge> n5 = new HashMap<>();
 
  static void setn(){
+   Vertex N0 = new Vertex();
+   Vertex N1 = new Vertex();
+  Vertex N2 = new Vertex();
+   Vertex N3 = new Vertex();
+   Vertex N4 = new Vertex();
+   Vertex N5 = new Vertex();
+
+
+   Edge E0 = new Edge();
+   Edge E1 = new Edge();
+    Edge E2 = new Edge();
+   Edge E3 = new Edge();
+   Edge E4 = new Edge();Edge E5 = new Edge();
+   Edge E6 = new Edge();
+  Edge E7 = new Edge();
+   Edge E8 = new Edge();
+   Edge E9 = new Edge();
+  Edge E10 = new Edge();
+
+
+   HashMap<String,Edge> n0 = new HashMap<>();
+   HashMap<String,Edge> n1 = new HashMap<>();HashMap<String,Edge> n2 = new HashMap<>();
+   HashMap<String,Edge> n3 = new HashMap<>();
+   HashMap<String,Edge> n4 = new HashMap<>();
+   HashMap<String,Edge> n5 = new HashMap<>();
 
   N0.VertexName = "start_model";
   N0.key = 0;
@@ -105,7 +104,7 @@ static Vertex N1 = new Vertex();
 
  }
 
- static HashMap<Integer, HashMap<String, Edge>> getnode(){
+  static HashMap<Integer, HashMap<String, Edge>> getnode(){
 
 
   return Node;
