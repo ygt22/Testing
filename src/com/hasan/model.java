@@ -19,18 +19,20 @@ import java.util.HashMap;
 
    Edge E0 = new Edge();
    Edge E1 = new Edge();
-    Edge E2 = new Edge();
+   Edge E2 = new Edge();
    Edge E3 = new Edge();
-   Edge E4 = new Edge();Edge E5 = new Edge();
+   Edge E4 = new Edge();
+   Edge E5 = new Edge();
    Edge E6 = new Edge();
-  Edge E7 = new Edge();
+   Edge E7 = new Edge();
    Edge E8 = new Edge();
    Edge E9 = new Edge();
-  Edge E10 = new Edge();
+   Edge E10 = new Edge();
 
 
    HashMap<String,Edge> n0 = new HashMap<>();
-   HashMap<String,Edge> n1 = new HashMap<>();HashMap<String,Edge> n2 = new HashMap<>();
+   HashMap<String,Edge> n1 = new HashMap<>();
+   HashMap<String,Edge> n2 = new HashMap<>();
    HashMap<String,Edge> n3 = new HashMap<>();
    HashMap<String,Edge> n4 = new HashMap<>();
    HashMap<String,Edge> n5 = new HashMap<>();
