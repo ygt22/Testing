@@ -1,5 +1,6 @@
 package com.hasan;
 
+// testr okuma son
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
